@@ -1,0 +1,17 @@
+<head>
+   <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="content_post">
+  <div class="more">
+   <%= simple_format(blog.text) %>
+  </div>
+    <ul class="more_list">
+      <li>SHOW</li>
+      <li><%=link_to 'EDIT',"/blogs/#{blog.id}/edit",method: :get %></li>
+      <li><%=link_to 'DESTROY',"blogs/#{blog.id}", method: :delete %></li>
+    </ul>
+  </div>
+  </div>
+</body>

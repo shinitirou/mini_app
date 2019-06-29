@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MiniApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <style type="text/css" href="./style.css"></style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+
+  <nav class="teal lighten-2">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">blog</a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <li><%=link_to 'Sign up', new_user_registration_path, class: 'post'%>
+           <li><%=link_to 'Sign in',new_user_session_path, class: 'post'%></li>
+           <li><%=link_to 'Sign out',destroy_user_session_path, method: :delete%></li>
+           <li><%=link_to 'new','/blogs/new'%></li>
+         </ul>
+      </div>
+  </nav>
+  <script type="text/javascript" src="./app.js"></script>
+
+  <div >
+    <%= yield %>
+  </div>
+
+  </body>
+</html>
